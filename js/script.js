@@ -22,7 +22,36 @@ var links = ["https://youtu.be/j99vw-6gkBc", "https://youtu.be/VTkSzxiPawY " , "
 function displaySongInfo(){
     // BELOW Use forEach Loop to display the data from each of your arrays in the correct div
 
+    songs.forEach(function(music) {
+        $("#songs").append("<p>" + music + "</p>");
+    });
+    
+    images_links.forEach(function(picture){
+        $("#images").append("<img src=" + picture + ">");
+    });
+    
+        artists.forEach(function (singer){
+    $("#artists").append("<p>" + singer + "</p>");
+        }); 
+        
+        songLengths.forEach(function(time){
+            $("#lengths").append("<p> "+ time+ "</p>");
+        });
+        
+            links.forEach(function(video){
+                $("#links").append("<a href=" + video + ">"  + "click here </a>");
+                
+          });
 }
+
+
+
+
+
+
+
+
+
 
 function emptySongInfo(){
     $("#songs").empty();
