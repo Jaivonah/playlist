@@ -42,30 +42,48 @@ function displaySongInfo(){
                 $("#links").append("<a href=" + video + ">"  + "click here </a>");
                 
           });
+  
+    
 }
-
-
-
-
-
-
-
-
-
-
 function emptySongInfo(){
     $("#songs").empty();
+    $("#artists").empty();
+    $("#images").empty();
+    $("#links").empty();
+    $("#lengths").empty();
+    
     // Use jQuery to empty all of the remaining divs
 
 
 }
-
-
 function addSongInfo(){
     // BELOW write the code to add new items to each of the arrays.
+  var song = $("#song").val();
+ 
+    songs.push(song);
 
+  var artist=("#artist").val();
+    artists.push(artist);
+    
+    
+     /* var image=("#image").val();
+    images_links.push(image);
+     
+    
+    
+      var link=("#link").val();
+    links.push(link);
+    
+    
+    
+    
+     var length=("#length").val();
+    songLengths.push(length);
+*/
 
 }
+
+
 
 $("#add").click(function() {
     emptySongInfo();
